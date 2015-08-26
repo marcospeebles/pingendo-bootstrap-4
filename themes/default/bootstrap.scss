@@ -637,10 +637,38 @@ $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
 
 
-
-// Core variables and mixins
-//@import "variables";
-@import "mixins";
+// // Mixins
+@import "mixins/alert";
+@import "mixins/background-variant";
+@import "mixins/border-radius";
+@import "mixins/breakpoints";
+@import "mixins/buttons";
+@import "mixins/center-block";
+@import "mixins/clearfix";
+@import "mixins/forms";
+@import "mixins/gradients";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "mixins/hide-text";
+@import "mixins/hover";
+@import "mixins/image";
+@import "mixins/label";
+@import "mixins/list-group";
+@import "mixins/nav-divider";
+@import "mixins/navbar-align";
+@import "mixins/pagination";
+@import "mixins/progress";
+@import "mixins/pulls";
+@import "mixins/reset-filter";
+@import "mixins/reset-text";
+@import "mixins/resize";
+@import "mixins/responsive-visibility";
+@import "mixins/screen-reader";
+@import "mixins/size";
+@import "mixins/tab-focus";
+@import "mixins/table-row";
+@import "mixins/text-emphasis";
+@import "mixins/text-truncate;
 
 // // Reset and dependencies
 @import "normalize";
