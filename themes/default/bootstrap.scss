@@ -638,6 +638,7 @@ $pre-scrollable-max-height:   340px !default;
 
 
 // // Mixins
+@import "_mixins";
 @import "mixins/_alert";
 @import "mixins/_background-variant";
 @import "mixins/_border-radius";
