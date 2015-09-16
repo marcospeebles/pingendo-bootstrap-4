@@ -6339,23 +6339,23 @@ a.bg-danger:hover {
 // Base sections
 // --------------------------------------------------
 .section {
-
   position:relative;
-
-  .background-image {
-    z-index:0;
-    position:absolute;
-    top:0px;
-    width:100%;
-    height:100%;
-    background-size: cover;
-    background-position: center;
-    &.background-image-fixed {
-      background-attachment: fixed;
-    }
-  }
-
 }
+
+.section .background-image {
+  z-index:0;
+  position:absolute;
+  top:0px;
+  width:100%;
+  height:100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.section .background-image.background-image-fixed {
+  background-attachment: fixed;
+}
+
 
 // Alternate sections
 // --------------------------------------------------
