@@ -6341,7 +6341,6 @@ a.bg-danger:hover {
 .section {
 
   position:relative;
-  padding: @section-spacing 0;
 
   .background-image {
     z-index:0;
@@ -6360,7 +6359,7 @@ a.bg-danger:hover {
 
 // Alternate sections
 // --------------------------------------------------
-.section-primary {
+/*.section-primary {
   background-color: @brand-primary !important;
   color: @btn-primary-color;
 
@@ -6401,9 +6400,9 @@ a.bg-danger:hover {
     opacity: 0.5;
   }
 }
+*/
 
-
-
+/*
 .cover {  
   .jumbotron();
   .section();
@@ -6488,4 +6487,4 @@ a.bg-danger:hover {
     }
   }
 
-} 
+} */
