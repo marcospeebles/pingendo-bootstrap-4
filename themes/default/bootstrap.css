@@ -6340,7 +6340,7 @@ a.bg-danger:hover {
 }
 
 .section .background-image {
-  z-index:0;
+  z-index:-1;
   position:absolute;
   top:0px;
   width:100%;
