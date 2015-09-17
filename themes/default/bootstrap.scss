@@ -1,15 +1,4 @@
-/*!
- * Bootstrap v4.0.0-alpha (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-
-// Variables
-//
-// Copy settings from this file into the provided `_custom.scss` to override
-// the Bootstrap defaults without modifying key, versioned files.
-
+@import 'http://pingendo.github.io/pingendo-bootstrap-4/scss/bootstrap';
 
 // Table of Contents
 //
@@ -56,6 +45,7 @@ $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        false !default;
 $enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
 
 
 // Spacing
@@ -66,7 +56,7 @@ $enable-hover-media-query:  false !default;
 $spacer:                     1rem !default;
 $spacer-x:                   $spacer !default;
 $spacer-y:                   $spacer !default;
-$border-width:               .0625rem !default;
+$border-width:               1px !default;
 
 
 // Body
@@ -82,6 +72,7 @@ $body-color:                 $gray-dark !default;
 // Style anchor elements.
 
 $link-color:                 $brand-primary !default;
+$link-decoration:            none !default;
 $link-hover-color:           darken($link-color, 15%) !default;
 $link-hover-decoration:      underline !default;
 
@@ -149,10 +140,10 @@ $font-size-h4:               1.5rem !default;
 $font-size-h5:               1.25rem !default;
 $font-size-h6:               1rem !default;
 
-$display1-size:               3.5rem !default;
-$display2-size:               4.5rem !default;
-$display3-size:               5.5rem !default;
-$display4-size:               6rem !default;
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
 
 $display1-weight:             300 !default;
 $display2-weight:             300 !default;
@@ -288,11 +279,11 @@ $input-padding-y-sm:             .275rem !default;
 $input-padding-x-lg:             1.25rem !default;
 $input-padding-y-lg:             .75rem !default;
 
-$input-height:                   (($font-size-base * $line-height) + ($input-padding-y * 2) + ($border-width * 2)) !default;
-$input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2) + ($border-width * 2)) !default;
-$input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2) + ($border-width * 2)) !default;
+$input-height:                   (($font-size-base * $line-height) + ($input-padding-y * 2)) !default;
+$input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
+$input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
 
-$form-group-margin-bottom:       15px !default;
+$form-group-margin-bottom:       $spacer-y !default;
 
 $input-group-addon-bg:           $gray-lighter !default;
 $input-group-addon-border-color: $input-border !default;
@@ -458,8 +449,7 @@ $card-border-width:        .0625rem !default;
 $card-border-radius:       .25rem !default;
 $card-border-color:        #e5e5e5 !default;
 $card-border-radius-inner: ($card-border-radius - $card-border-width) !default;
-
-$card-cap-bg: #f5f5f5;
+$card-cap-bg:              #f5f5f5 !default;
 
 // Tooltips
 
@@ -635,256 +625,3 @@ $pre-bg:                      #f7f7f9 !default;
 $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
-
-
-// // Mixins
-@mixin border-radius($radius: $border-radius) {
-  @if $enable-rounded {
-    border-radius: $radius;
-  }
-}
-
-@mixin box-shadow($shadow...) {
-  @if $enable-shadows {
-    box-shadow: $shadow;
-  }
-}
-
-@mixin transition($transition...) {
-  @if $enable-transitions {
-    transition: $transition;
-  }
-}
-
-@import "mixins/_alert";
-@import "mixins/_background-variant";
-@import "mixins/_border-radius";
-@import "mixins/_breakpoints";
-@import "mixins/_buttons";
-@import "mixins/_center-block";
-@import "mixins/_clearfix";
-@import "mixins/_forms";
-@import "mixins/_gradients";
-@import "mixins/_grid-framework";
-@import "mixins/_grid";
-@import "mixins/_hover";
-@import "mixins/_image";
-@import "mixins/_label";
-@import "mixins/_list-group";
-@import "mixins/_nav-divider";
-@import "mixins/_navbar-align";
-@import "mixins/_pagination";
-@import "mixins/_progress";
-@import "mixins/_pulls";
-@import "mixins/_reset-filter";
-@import "mixins/_reset-text";
-@import "mixins/_resize";
-@import "mixins/_screen-reader";
-@import "mixins/_size";
-@import "mixins/_tab-focus";
-@import "mixins/_table-row";
-@import "mixins/_text-emphasis";
-@import "mixins/_text-truncate";
-
-// // Reset and dependencies
-@import "_normalize";
-@import "_print";
-
-// Core CSS
-@import "_reboot";
-@import "_type";
-@import "_images";
-@import "_code";
-@import "_grid";
-@import "_tables";
-@import "_forms";
-@import "_buttons";
-
-// // Components
-@import "_animation";
-@import "_dropdown";
-@import "_button-group";
-@import "_input-group";
-@import "_custom-forms";
-@import "_nav";
-@import "_navbar";
-@import "_card";
-@import "_breadcrumb";
-@import "_pagination";
-@import "_pager";
-@import "_labels";
-@import "_jumbotron";
-@import "_alert";
-@import "_progress";
-@import "_media";
-@import "_list-group";
-@import "_responsive-embed";
-@import "_close";
-
-// Components w/ JavaScript
-@import "_modal";
-@import "_tooltip";
-@import "_popover";
-@import "_carousel";
-
-// Utility classes
-@import "_utilities";
-@import "_utilities-spacing";
-@import "_utilities-responsive";
-
-
-
-
-// Base sections
-// --------------------------------------------------
-.section {
-
-  position:relative;
-  padding: @section-spacing 0;
-
-  .background-image {
-    z-index:0;
-    position:absolute;
-    top:0px;
-    width:100%;
-    height:100%;
-    background-size: cover;
-    background-position: center;
-    &.background-image-fixed {
-      background-attachment: fixed;
-    }
-  }
-
-}
-
-// Alternate sections
-// --------------------------------------------------
-.section-primary {
-  background-color: @brand-primary !important;
-  color: @btn-primary-color;
-
-  .background-image {
-    opacity: 0.5;
-  }
-}
-
-.section-info {
-  background-color: @brand-info !important;
-  color: @btn-info-color;
-  .background-image {
-    opacity: 0.5;
-  }
-}
-
-.section-success {
-  background-color: @brand-success !important;
-  color: @btn-success-color;
-  .background-image {
-    opacity: 0.5;
-  }
-}
-
-
-.section-warning {
-  background-color: @brand-warning !important;
-  color: @btn-warning-color;
-  .background-image {
-    opacity: 0.5;
-  }
-}
-
-.section-danger {
-  background-color: @brand-danger !important;
-  color: @btn-warning-color;
-  .background-image {
-    opacity: 0.5;
-  }
-}
-
-
-
-.cover {  
-  .jumbotron();
-  .section();
-
-  padding: 0px 0px;
-  background-color: transparent;
-  
-  @media screen and (min-width: @screen-sm-min) {
-    padding: 0px;
-
-    .container &,
-    .container-fluid & {
-      padding-left:  0px;
-      padding-right: 0px;
-    }
-  }
-
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-align-items: center;
-  align-items: center;
-  
-  overflow:hidden;
-  position:relative;
-  min-height: 100%;
-
-  .navbar {
-    position:absolute;
-    top: 0px;
-    width: 100%;
-    border: none;
-    background-color: transparent !important;
-
-    .navbar-nav li.active a {
-      background-color: transparent !important;
-    }
-
-    // Navbar toggle
-    //
-    // Custom button for toggling the `.navbar-collapse`, powered by the collapse
-    // JavaScript plugin.
-
-    .navbar-toggle {
-      border-color: transparent;
-      &:hover,
-      &:focus {
-        background-color: transparent;
-      }
-      .icon-bar {
-        background-color: @text-color;
-      }
-    }
-
-
-    &.navbar-inverse .navbar-toggle {
-      border-color: transparent;
-      &:hover,
-      &:focus {
-        background-color: transparent;
-      }
-      .icon-bar {
-        background-color: @text-inverse;
-      }
-    }
-  }
-
-  /* deprecated. use section background-image instead */
-
-  .cover-image {
-    z-index:0;
-    position:absolute;
-    top:0px;
-    width:100%;
-    height:100%;
-    background-size: cover;
-    background-position: center;
-    &.background-image-fixed, &.cover-image-fixed {
-      background-attachment: fixed;
-    }
-  }
-
-} 
