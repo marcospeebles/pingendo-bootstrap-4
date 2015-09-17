@@ -6349,3 +6349,7 @@ a.bg-danger:hover {
     max-width: 72.25rem;
   }
 }
+
+.text-inverse {
+  color: white;
+}
