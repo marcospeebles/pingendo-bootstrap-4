@@ -1,5 +1,28 @@
 // Alerts
 
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+@mixin border-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+}
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    transition: $transition;
+  }
+}
+
+
 @mixin alert-variant($background, $border, $body-color) {
   background-color: $background;
   border-color: $border;
@@ -3542,29 +3565,6 @@ button.list-group-item {
   padding-left: 0;
   list-style: none;
 }
-
-// Toggles
-//
-// Used in conjunction with global variables to enable certain theme features.
-
-@mixin border-radius($radius: $border-radius) {
-  @if $enable-rounded {
-    border-radius: $radius;
-  }
-}
-
-@mixin box-shadow($shadow...) {
-  @if $enable-shadows {
-    box-shadow: $shadow;
-  }
-}
-
-@mixin transition($transition...) {
-  @if $enable-transitions {
-    transition: $transition;
-  }
-}
-
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
 // .modal-dialog    - positioning shell for the actual modal
